@@ -1,0 +1,89 @@
+let screen = document.querySelector('#screen');
+let btn = document.querySelectorAll('.btn');
+
+for (item of btn) {
+    item.addEventListener('click', (e) => {
+        btntext = e.target.innerText;
+
+        if (btntext == '×') {
+            btntext = '*';
+        }
+
+        if (btntext == '÷') {
+            btntext = '/';
+        }
+        screen.value += btntext;
+
+        // Update the answer-box every time an operator button is clicked
+        if (isOperator(btntext)) {
+            let result = eval(screen.value);
+            updateAnswer(result);
+        }
+    });
+}
+
+// Function to check if a character is an operator
+function isOperator(char) {
+    return char === '+' || char === '-' || char === '*' || char === '/';
+}
+
+function sin() {
+    screen.value = Math.sin(screen.value);
+}
+
+function cos() {
+    screen.value = Math.cos(screen.value);
+}
+
+function tan() {
+    screen.value = Math.tan(screen.value);
+}
+
+function pow() {
+    screen.value = Math.pow(screen.value, 2);
+}
+
+function sqrt() {
+    screen.value = Math.sqrt(screen.value);
+}
+
+function log() {
+    screen.value = Math.log(screen.value);
+}
+
+function pi() {
+    screen.value = Math.PI;
+}
+
+function e() {
+    screen.value = Math.E;
+}
+
+function fact() {
+    let num = parseInt(screen.value);
+    let f = 1;
+    for (let i = 1; i <= num; i++) {
+        f *= i;
+    }
+
+    screen.value = f;
+}
+
+function backspc() {
+    screen.value = screen.value.substr(0, screen.value.length - 1);
+}
+
+function calculate() {
+    let result = eval(screen.value);
+    updateAnswer(result);
+    // Replace the value in .display #screen with the value in #answer
+    screen.value = result;
+    // Clear the value in #answer
+    document.getElementById('answer').value = '';
+}
+
+function updateAnswer(answer) {
+    let answerElement = document.getElementById('answer');
+    // Update the answer value
+    answerElement.value = `${answer}`;
+}

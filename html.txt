@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator in HTML CSS & JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="header">
+      <header>Basic Calculator</header>
+    </section>
+
+    <section id="appearance">
+      <div>
+        <button onclick="darkMode()">Toggle Dark Mode</button>
+      </div>
+    </section>
+
+    <section class="container">
+      <div>
+        <input type="text" class="display" />
+        <div class="buttons">
+          <button id="ac" class="operator" data-value="AC">AC</button>
+          <button class="operator" data-value="DEL">DEL</button>
+          <button class="operator" data-value="/">/</button>
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button class="operator" data-value="*">*</button>
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button class="operator" data-value="-">-</button>
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button class="operator" data-value="+">+</button>
+          <button data-value="0">0</button>
+          <button data-value="00">00</button>
+          <button data-value=".">.</button>
+          <button class="operator" data-value="=">=</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="footers">
+      <section id="footer">
+        <div>
+          <footer>
+            <span>Benedict Gonzales</span>
+            <span>|</span>
+            <span>Alexander Oxales</span>
+            <span>|</span>
+            <span>Karl Portollano</span>
+            <span>|</span>
+            <span>Term Policies</span>
+            <span>|</span>
+            <span>Privacy Policy</span>
+            <span>|</span>
+            <span>&copy; Basic Calculator</span>
+          </footer>
+        </div>
+      </section>
+
+      <section id="footer2">
+        <footer>
+          <ul>
+            <li>Benedict Gonzales</li>
+            <li>Alexander Oxales</li>
+            <li>Karl Portollano</li>
+            <br />
+            <li>Term Policies</li>
+            <li>Privacy Policy</li>
+            <li>&copy; Basic Calculator</li>
+          </ul>
+        </footer>
+      </section>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
